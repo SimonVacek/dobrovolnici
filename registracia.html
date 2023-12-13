@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sk">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href = "style.css">
+        <title>DOBROVOLNICI</title>
+    </head>
+    <body>
+        <form method="post">
+            <fieldset>
+                <legend>Zaregistrujte sa</legend>
+                Meno: <input type="text" id="SignInName" name="meno" required> <br>
+                Email: <input type="text" id="SignInMail" name="email" required> <br>
+                Heslo: <input type="password" id="SignInPassword" name="heslo" required> <br>
+                Zopakuj heslo: <input type="password" id="SignInPasswordRepeat" name="hesloZopakovanie" required> <br><br>
+                
+                Overenie Emailu:<br> 
+                <button>Odoslať kód</button> <button>Nedostal som kód</button> <br>Sem zadajte kód ktorý vám prišiel na mail...<br>
+                <input type="text" id="verificationCode" name="kód" required> <br><br>
+
+                <input class="submit" id="SignInButton" type="submit" value="Prihlásiť sa" name="Log in">
+            </fieldset>
+        </form>
+
+        <a href="prihlasenie.html">Máte účet? Prihláste sa!</a> <br>
+        <a href="index.html">Vrátiť sa na domovskú stránku...</a>
+        <script src="javascript.js"></script>
+    </body>
+</html>
