@@ -6,7 +6,6 @@
         <title>DOBROVOLNICI</title>
     </head>
     <body>
-
         <h3>
             Zadajte stručný názov:
         </h3>
@@ -14,12 +13,17 @@
         <p>
             Zadajte popisok pre vašu žiadosť
         </p>
-        <textarea name="requestDescribtion" cols="50" rows="5" required></textarea>
+        <textarea id="requestDescription" cols="50" rows="5" required></textarea>
         <br><br>
 
-        <button id="createRequest">Vytvoriť požiadavku</button>
+        <input type="submit" id="createRequest" value="Vytvoriť požiadavku">
         <br><br>
         <a href="index.html">Vrátiť sa naspäť</a>
-        <script src="javascript.js"></script>
+        <br><br><br><br>
+        Dočasné uložisko<br>
+        <ul id="poziadavky">
+
+        </ul>
+        <script src="tvorbaPoziadavky.js"></script>
     </body>
 </html>
