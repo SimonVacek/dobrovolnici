@@ -1,0 +1,10 @@
+{
+    "user": {
+        "name": "Jožko Mrkvička",
+        "mail": "jožko.mrkvička@gmail.com",
+        "password": "a",
+        "description": "Ja som Jožko a potrebujem pomoc!",
+        "pfp": null,
+        "verification": false
+    }
+}
