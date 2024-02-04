@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 59479c3 (first fetch attempt)
 // let loggedInUser = {"userName": "JozkoMrkvicka", "mail": "jožko.mrkvička@gmail.com", "password": "a"};
 
 let loggedInUser = {};
@@ -43,6 +46,7 @@ fetch('JSON/profil.json')
         
     })
     
+<<<<<<< HEAD
 let confirmButton = document.querySelector('#customizeConfirmButton');
 
 
@@ -50,13 +54,18 @@ confirmButton.addEventListener('click',(event)=>{
     event.preventDefault(); //aby sa neresetovala stranka na submit
 =======
 let loggedInUser = {"userName": "JozkoMrkvicka", "mail": "jožko.mrkvička@gmail.com", "password": "a"};
+=======
+>>>>>>> 59479c3 (first fetch attempt)
 let confirmButton = document.querySelector('#customizeConfirmButton');
-document.querySelector('#customizeName').placeholder = loggedInUser.userName;
-document.querySelector('#customizeMail').placeholder = loggedInUser.mail;
+
 
 confirmButton.addEventListener('click',(event)=>{
+<<<<<<< HEAD
     event.preventDefault(); // aby sa neresetovala stranka na submit
 >>>>>>> f0542a1 (Dočasný javascript pre tvorbuPoziadavky, registracia, prihlasenie, uprava profilu a mensie upravy do roznych HTML)
+=======
+    event.preventDefault(); //aby sa neresetovala stranka na submit
+>>>>>>> 59479c3 (first fetch attempt)
 
     let customizedName = document.querySelector('#customizeName').value;
     let customizedMail = document.querySelector('#customizeMail').value;
@@ -65,12 +74,17 @@ confirmButton.addEventListener('click',(event)=>{
     let newPasswordRepeat = document.querySelector('#customizeNewPasswordRepeat').value;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (customizedName != "" && customizedName != loggedInUser.name) {
         loggedInUser.name = customizedName;
 =======
     if (customizedName != "" && customizedName != loggedInUser.userName) {
         loggedInUser.userName = customizedName;
 >>>>>>> f0542a1 (Dočasný javascript pre tvorbuPoziadavky, registracia, prihlasenie, uprava profilu a mensie upravy do roznych HTML)
+=======
+    if (customizedName != "" && customizedName != loggedInUser.name) {
+        loggedInUser.name = customizedName;
+>>>>>>> 59479c3 (first fetch attempt)
         alert("Uspene zmenene meno...");
     }
     if (customizedMail != "" && customizedMail != loggedInUser.mail) {
@@ -82,10 +96,14 @@ confirmButton.addEventListener('click',(event)=>{
         alert("Uspene zmenene heslo...");
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
     document.querySelector('#customizeName').placeholder = loggedInUser.name;
 =======
     document.querySelector('#customizeName').placeholder = loggedInUser.userName;
 >>>>>>> f0542a1 (Dočasný javascript pre tvorbuPoziadavky, registracia, prihlasenie, uprava profilu a mensie upravy do roznych HTML)
+=======
+    document.querySelector('#customizeName').placeholder = loggedInUser.name;
+>>>>>>> 59479c3 (first fetch attempt)
     document.querySelector('#customizeMail').placeholder = loggedInUser.mail;
 
     document.querySelector('#customizeName').value = "";
