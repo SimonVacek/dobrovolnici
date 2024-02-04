@@ -1,10 +1,52 @@
-let loggedInUser = {"userName": "JozkoMrkvicka", "mail": "jožko.mrkvička@gmail.com", "password": "a"};
+// let loggedInUser = {"userName": "JozkoMrkvicka", "mail": "jožko.mrkvička@gmail.com", "password": "a"};
+
+let loggedInUser = {};
+/*
+document.addEventListener("DOMContentLoader", () =>{
+    
+    fetch('JSON/profil.json')
+        .then(response => {
+            console.log("fetch start");
+
+            return response.json(); // Convert the response to JSON
+        })
+        .then(data => {
+            loggedInUser = data.user;
+            console.log(data.user);
+            console.log("fetch end");
+        })
+        .catch(error => {
+            // Handle errors
+            console.error('Error during fetch:', error);
+        });
+});*/
+    
+/*});*/
+fetch('JSON/profil.json')
+    .then(response => {
+        console.log("fetch start");
+        console.log('Resolved: ', response);
+        return response.json();
+    })
+    .then(data => {
+        loggedInUser = data.user
+        document.querySelector('#customizeName').placeholder = loggedInUser.name;
+        document.querySelector('#customizeMail').placeholder = loggedInUser.mail;
+        console.log(data.user);
+        console.log(loggedInUser);
+        console.log("Succesfully logged in")
+    })
+    .catch(errorData => {
+        // iba ak je nemožné spraviť request - DNS, network, ...
+        console.error('Rejected: ', errorData); 
+        
+    })
+    
 let confirmButton = document.querySelector('#customizeConfirmButton');
-document.querySelector('#customizeName').placeholder = loggedInUser.userName;
-document.querySelector('#customizeMail').placeholder = loggedInUser.mail;
+
 
 confirmButton.addEventListener('click',(event)=>{
-    event.preventDefault(); // aby sa neresetovala stranka na submit
+    event.preventDefault(); //aby sa neresetovala stranka na submit
 
     let customizedName = document.querySelector('#customizeName').value;
     let customizedMail = document.querySelector('#customizeMail').value;
@@ -12,8 +54,8 @@ confirmButton.addEventListener('click',(event)=>{
     let newPassword = document.querySelector('#customizeNewPassword').value;
     let newPasswordRepeat = document.querySelector('#customizeNewPasswordRepeat').value;
 
-    if (customizedName != "" && customizedName != loggedInUser.userName) {
-        loggedInUser.userName = customizedName;
+    if (customizedName != "" && customizedName != loggedInUser.name) {
+        loggedInUser.name = customizedName;
         alert("Uspene zmenene meno...");
     }
     if (customizedMail != "" && customizedMail != loggedInUser.mail) {
@@ -24,7 +66,7 @@ confirmButton.addEventListener('click',(event)=>{
         loggedInUser.password = newPassword;
         alert("Uspene zmenene heslo...");
     }
-    document.querySelector('#customizeName').placeholder = loggedInUser.userName;
+    document.querySelector('#customizeName').placeholder = loggedInUser.name;
     document.querySelector('#customizeMail').placeholder = loggedInUser.mail;
 
     document.querySelector('#customizeName').value = "";
