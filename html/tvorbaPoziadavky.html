@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sk">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href = "../css/style.css">
+        <title>Dobrovoľníci</title>
+    </head>
+    <body>
+        <h3>
+            Zadajte stručný názov:
+        </h3>
+        <textarea id="requestTitle" cols="50" rows="3" required></textarea>
+        <p>
+            Zadajte popisok pre Vašu žiadosť:
+        </p>
+        <textarea id="requestDescription" cols="50" rows="5" required></textarea>
+        <br><br>
+
+        <input type="submit" id="createRequest" value="Vytvoriť požiadavku">
+        <br><br>
+        <a href="index.html">Vrátiť sa späť</a>
+        <br><br><br><br>
+        Dočasné uložisko<br>
+        <ul id="poziadavky">
+
+        </ul>
+        <script src="../js/tvorbaPoziadavky.js"></script>
+    </body>
+</html>

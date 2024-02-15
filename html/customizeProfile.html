@@ -1,3 +1,4 @@
+<<<<<<< HEAD:customizeProfile.html
 <!DOCTYPE html>
 <html lang="sk">
     <head>
@@ -35,4 +36,34 @@
 >>>>>>> 59479c3 (first fetch attempt)
         <script src="customizeProfile.js"></script>
     </body>
+=======
+<!DOCTYPE html>
+<html lang="sk">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href = "../css/style.css">
+        <title>Dobrovoľníci</title>
+    </head>
+    <body>
+        <form method="post">
+            <fieldset>
+                <legend>Úprava profilu</legend>
+                Nový obrázok: <input type="file"> <br>
+                Meno: <input type="text" id="customizeName" name="meno"> <br>
+                Email: <input type="text" id="customizeMail" name="email"> <br>
+                Staré heslo: <input type="password" id="customizeOldPassword" name="staréHeslo"> <br>
+                Nové heslo: <input type="password" id="customizeNewPassword" name="NovéHeslo"> <br>
+                Zopakuj nové heslo: <input type="password" id="customizeNewPasswordRepeat" name="NovéHesloZopakovanie"> <br>
+                Zobraz/Skry heslá<input type="checkbox" id="customizeShowPassword"><br><br>
+                
+                <input class="submit" id="customizeConfirmButton" type="submit" value="Potvrdiť zmeny" name="ConfirmCustomization">
+                <!--<input class="submit" id="customizeDropButton" type="submit" value="Zahoď zmeny" name="DropCustomization">-->
+            </fieldset>
+        </form> 
+        <a href="profil.html">Vrátiť sa na profil</a>
+
+        <script src="../js/customizeProfileFetch.js"></script>
+        <script src="../js/customizeProfile.js"></script>
+    </body>
+>>>>>>> 9bd3553 (ver 2.0 + docker):html/customizeProfile.html
 </html>

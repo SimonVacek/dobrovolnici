@@ -1,0 +1,122 @@
+body {
+    background-color: white;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    
+}
+
+header {
+    background-color: #03A678;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    border: 0px solid white;
+    width: 100%;
+    height: 100px;
+    text-align: center;   
+}
+
+#login {
+    padding-top: 35px;
+}
+
+a {
+    color: white;
+    background-color: #03A678;
+}
+#menuToggle a {
+    color: white;
+    background-color: #027353;
+    font-weight: bold;
+}
+
+#pfp {
+    margin-left: 35px;
+}
+
+#bigBorder {
+    width: 50%;
+    /*height: 100px;*/
+    background-color: white;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+#poziadavky li {
+    top: 100px;
+    /*width: 300px;*/
+    height: 200px;
+    background-color: #03A678;
+    position: relative;
+    text-align: left;
+    padding: 2px;
+    color: white;
+    left:50%;
+    margin-bottom:1% ;
+}
+
+#poziadavky button {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: #F2421B;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+#poziadavky button a{
+    background-color: #F2421B;
+}
+
+.category-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+
+.specific-div {
+    position: relative; 
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    left: 50%;
+}
+.div-for-creation {
+    
+    position: relative; 
+    padding: 20px;
+    text-align: center;
+    left: 50%;
+}
+.creation {
+    background-color: #F2421B;
+    
+    border: none;
+    position: relative; 
+    padding: 20px;
+    text-align: center;
+}
+.creation a {
+    background-color: #F2421B;
+}
+
+#customize-account img {
+    background-color:#03A678;
+}
+#customize-account a {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
