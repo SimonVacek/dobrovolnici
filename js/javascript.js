@@ -12,7 +12,7 @@ fetch('../json/posts.json')
         let userPosts = document.querySelector('#poziadavky');
         posts.forEach((text) => {
             //console.log(text);
-            let liE = document.createElement('li');
+            let liE = document.createElement('li'); //LiElement
             liE.innerHTML = text
             //console.log(liE);
             userPosts.append(liE)

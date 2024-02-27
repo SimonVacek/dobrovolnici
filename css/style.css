@@ -25,6 +25,7 @@ a {
     color: white;
     background-color: #03A678;
 }
+
 #menuToggle a {
     color: white;
     background-color: #027353;
@@ -72,6 +73,7 @@ a {
     cursor: pointer;
     margin-bottom: 10px;
 }
+
 #poziadavky button a{
     background-color: #F2421B;
 }
@@ -84,7 +86,7 @@ a {
     border: none;
     cursor: pointer;
     margin-bottom: 10px;
-  }
+}
 
 .specific-div {
     position: relative; 
@@ -93,6 +95,7 @@ a {
     text-align: center;
     left: 50%;
 }
+
 .div-for-creation {
     
     position: relative; 
@@ -100,6 +103,7 @@ a {
     text-align: center;
     left: 50%;
 }
+
 .creation {
     background-color: #F2421B;
     
@@ -108,6 +112,7 @@ a {
     padding: 20px;
     text-align: center;
 }
+
 .creation a {
     background-color: #F2421B;
 }
@@ -115,6 +120,7 @@ a {
 #customize-account img {
     background-color:#03A678;
 }
+
 #customize-account a {
     background-color: white;
     color: black;
