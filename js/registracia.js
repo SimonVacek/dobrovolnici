@@ -13,7 +13,17 @@ registerButton.addEventListener('click',(event)=>{
     if(registerPasswordRepeat==registerPassword&&registerName!=""&&registerPassword!=""&&registerMail!=""&&verificationCode==="AAAA") {
         let user = {"userName": registerName, "mail": registerMail, "password": registerPassword}
         usersList.push(user);
-        console.log(usersList);
+
+        let json = JSON.stringify(user);
+        console.log(json);
+            fetch("", { //dočasne takto
+            method: "POST",
+            body: json,
+            headers: {
+                "Content-type": "UserSignUp",
+            }
+        });
+
     } else {
         alert("Chyba pri zadávaní údajov!");
     }

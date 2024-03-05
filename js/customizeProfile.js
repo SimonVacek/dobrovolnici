@@ -46,6 +46,17 @@ confirmButton.addEventListener('click',(event)=>{
         loggedInUser.password = newPassword;
         alert("Úspešne zmenené heslo!");
     }
+
+    let json = JSON.stringify(loggedInUser);
+    console.log(json);
+    fetch("", { //dočasne takto
+        method: "POST",
+        body: json,
+        headers: {
+            "Content-type": "CustomizeProfile",
+        }
+    });
+
     document.querySelector('#customizeName').placeholder = loggedInUser.name;
     document.querySelector('#customizeMail').placeholder = loggedInUser.mail;
 
