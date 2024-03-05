@@ -1,0 +1,23 @@
+#profilInfo {
+    display: flex;
+    width: 100%;  
+    padding-top: 20px;
+}
+#pfp {
+    width: 50%;
+
+}
+#costumize-account a {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+#costumize-account {
+    display: flex;
+    width: 50%;
+    text-align: right;
+    float: right;
+    justify-content: right;
+    padding-right: 20px;
+}
