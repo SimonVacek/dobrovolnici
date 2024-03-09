@@ -1,0 +1,12 @@
+#box {
+    width: 80%;
+    display: flex;
+}
+#box20 {
+    width: 20%;
+    display: flex;
+}
+
+#usersPosts {
+    padding: 10px;
+}

@@ -10,17 +10,6 @@ signInButton.addEventListener('click', (event) => {
     let logInPassword = document.querySelector('#LogInPassword').value;
     //console.log(logInName,logInPassword)
     if(logInName != "" && logInPassword  != ""){
-
-        let json = JSON.stringify({'signInName': logInName, 'signInPassword': logInPassword});
-        console.log(json);
-        fetch("", { //dočasne takto
-            method: "POST",
-            body: json,
-            headers: {
-                "Content-type": "UserSignIn",
-            }
-        });
-
         usersList.forEach(user => {
             //console.log(user);
             if(user.userName == logInName && user.password == logInPassword){
