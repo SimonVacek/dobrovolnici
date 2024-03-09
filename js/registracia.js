@@ -25,7 +25,7 @@ document.querySelector('#registerShow').addEventListener('click', (event) => {
     if(password.type == "password" && passwordRepeat.type=="password"){
         password.type = "text";
         passwordRepeat.type = "text";
-    }else{
+    } else{
         password.type = "password";
         passwordRepeat.type = "password";
     }

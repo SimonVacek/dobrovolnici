@@ -1,5 +1,5 @@
 let usersList = [{"userName": "JankoHrasko", "mail": "janko.hrasko@gmail.com", "password": "a"},{"userName": "JozkoMrkvicka", "mail": "jožko.mrkvička@gmail.com", "password": "a"}];
-//toto sa da spravit cez json-y ale toto je fakt iba na backend klde poslem meno a skotroluje heslo ku tomu etc., tak tuna json nedavam 
+//toto sa da spravit cez json-y ale toto je fakt iba na backend, kde poslem meno a skotroluje heslo ku tomu etc., tak tuna json nedavam 
 let foundUser = false;
 
 let loggedInUser = "";
@@ -9,7 +9,7 @@ signInButton.addEventListener('click', (event) => {
     let logInName = document.querySelector('#LogInName').value;
     let logInPassword = document.querySelector('#LogInPassword').value;
     //console.log(logInName,logInPassword)
-    if(logInName != "" && logInPassword  != ""){
+    if(logInName != "" && logInPassword != ""){
         usersList.forEach(user => {
             //console.log(user);
             if(user.userName == logInName && user.password == logInPassword){

@@ -27,7 +27,7 @@ services:
         - backend
     depends_on:
       - postgresql
-  php:
+  php-backend:
     build:
       context: .
       dockerfile: ./Dockerfile

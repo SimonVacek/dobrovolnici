@@ -17,6 +17,12 @@ header {
     text-align: center;   
 }
 
+#notLoggedIn, #loggedIn {
+    position: absolute;
+    top: 5%;
+    right: 3.5%;
+}
+
 #login {
     padding-top: 35px;
 }
@@ -97,7 +103,6 @@ a {
 }
 
 .div-for-creation {
-    
     position: relative; 
     padding: 20px;
     text-align: center;
@@ -106,7 +111,6 @@ a {
 
 .creation {
     background-color: #F2421B;
-    
     border: none;
     position: relative; 
     padding: 20px;
