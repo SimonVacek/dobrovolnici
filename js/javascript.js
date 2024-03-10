@@ -15,11 +15,18 @@ fetch('../json/posts.json')
             let liE = document.createElement('li'); //LiElement
             liE.id = post.id;
             liE.innerHTML = `<h3>${post.title}</h3><p>${post.description}</p>`
-
-            //console.log(liE);
+            let button = document.createElement('button');
+            button.textContent = "Prejsť na požiadavku";
+        
+            liE.appendChild(button)
             userPosts.append(liE);
+            button.onclick = function() {
+                console.log(`button click ${post.title}`);
+                window.location.href = `../html/prijatiePoziadavky.html?postId=${post.id}`;
+            };
+            //console.log(liE);
+            //userPosts.append(liE);
         });
-        console.log();
     })
     .catch(errorData => {
         // iba ak je nemožné spraviť request - DNS, network, ...
@@ -50,3 +57,10 @@ fetch('../json/profil.json')
     .catch(errorData => {
         console.error('Rejected: ', errorData);
     })
+
+document.querySelector('#ziadostiOPomocID').onclick = function () {
+    location.href = "ziadostiOPomoc.html"
+};
+document.querySelector('#ponukaDobrovolnikovID').onclick = function () {
+    location.href = "ponukaDobrovolnikov.html"
+};

@@ -43,7 +43,7 @@ a {
 }
 
 #bigBorder {
-    width: 50%;
+    /*width: 50%;*/
     /*height: 100px;*/
     background-color: white;
     padding-top: 20px;
@@ -54,16 +54,39 @@ a {
     height: 100%;
 }
 
+#ponuka {
+    display: flex;
+    justify-content:center;
+}
+#ponuka button {
+    background-color: #F2421B;
+    margin-left: 1%;
+    margin-right: 1%;
+    color: white;
+    padding: 20px 40px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    width:5cm;
+}
+
+#poziadavky, #dobrovolnici {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+}
+
 #poziadavky li {
     top: 100px;
-    /*width: 300px;*/
-    height: 200px;
+    width: 50%;
+    height: 250px;
     background-color: #03A678;
     position: relative;
     text-align: left;
     padding: 2px;
     color: white;
-    left:50%;
     margin-bottom:1% ;
 }
 
@@ -84,6 +107,40 @@ a {
     background-color: #F2421B;
 }
 
+#dobrovolnici li {
+    top: 100px;
+    width: 50%;
+    height: 10%;
+    background-color: #03A678;
+    position: relative;
+    text-align: center;
+    padding: 2px;
+    color: white;
+    margin-bottom:1%;
+}
+
+#dobrovolnici button {
+    background-color: #F2421B;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#returnFromDobList {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#returnFromDobList a {
+    padding: 20px;
+    background-color: #F2421B;
+    text-decoration: none;
+}
+
 .category-button {
     background-color: #4CAF50;
     color: white;
@@ -99,14 +156,14 @@ a {
     border: 1px solid #ccc;
     padding: 20px;
     text-align: center;
-    left: 50%;
+    /*left: 50%;*/
 }
 
 .div-for-creation {
     position: relative; 
     padding: 20px;
     text-align: center;
-    left: 50%;
+    /*left: 50%;*/
 }
 
 .creation {

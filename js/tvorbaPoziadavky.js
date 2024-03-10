@@ -12,15 +12,22 @@ createButton.addEventListener('click', (event) => {
     
     let json = JSON.stringify({'post': template});
     console.log(json);
-    fetch("", { //dočasne takto
-        method: "POST",
-        body: json,
-        headers: {
-            "Content-type": "application/json; charset=utf-8",
-        }
-    }) .then(response => {
-        console.log(response);
-    });
 
-    window.location.replace("tvorbaPoziadavky.html");
+    let userLoggedIn = false;
+
+    if(userLoggedIn) {
+        fetch("", { //dočasne takto
+            method: "POST",
+            body: json,
+            headers: {
+                "Content-type": "application/json; charset=utf-8",
+            }
+        }) .then(response => {
+            console.log(response);
+        });
+        window.location.replace("index.html");
+    } else {
+        alert("Nieste prihlásený")
+        window.location.replace("prihlasenie.html");
+    }
 });
