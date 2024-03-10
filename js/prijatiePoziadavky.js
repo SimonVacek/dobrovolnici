@@ -29,12 +29,12 @@ fetch('../json/posts.json')
         liE.innerHTML = `<h3>${post.title}</h3> <p>${post.description}</p>`;
 
         let button = document.createElement('button');
-        button.textContent = "Príjmam";
-        liE.appendChild(button)
+        button.textContent = "Prijímam";
+        liE.appendChild(button);
         userPosts.append(liE);
 
         button.onclick = function() {
-            let json = JSON.stringify({userID:user.id,postID:post.id});
+            let json = JSON.stringify({"userID": user.id, "postID": post.id});
             fetch('', {
                 method: "POST",
                 body: json,

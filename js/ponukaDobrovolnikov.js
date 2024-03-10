@@ -1,4 +1,4 @@
-let loggedInUser = ""
+let loggedInUser = "";
 fetch('../json/profil.json')
     .then(response => {
         console.log("fetch start");
@@ -20,7 +20,7 @@ fetch("../JSON/users.json")
     })
     .then(data => {
         console.log(data);
-        let dobrovolniciList = document.querySelector('#dobrovolnici')
+        let dobrovolniciList = document.querySelector('#dobrovolnici');
         data.users.forEach(user => {
             let LiElement = document.createElement('li');
             LiElement.innerHTML = `<h3>${user.name}</h3><p>${user.description}</p>`
@@ -28,12 +28,12 @@ fetch("../JSON/users.json")
 
             let button = document.createElement('button');
             button.textContent = "Kontaktovať doborovoľníka";
-            LiElement.appendChild(button)
+            LiElement.appendChild(button);
 
             dobrovolniciList.append(LiElement);         
             
             button.onclick = function() {
-                let json = JSON.stringify(loggedInUser + user)
+                let json = JSON.stringify({"userID": user.id, "loggedInUserID": loggedInUser.id});
                 fetch("", { //dočasne takto
                     method: "POST",
                     body: json,

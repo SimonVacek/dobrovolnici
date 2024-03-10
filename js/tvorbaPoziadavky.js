@@ -5,8 +5,8 @@ createButton.addEventListener('click', (event) => {
     let requestDescription = document.querySelector('#requestDescription').value;
     //const request = document.createElement('li');
     let template = {
-        "title":requestTitle,
-        "description":requestDescription
+        "title" : requestTitle,
+        "description" : requestDescription
     };
     //console.log({'post': template});
     
@@ -27,7 +27,7 @@ createButton.addEventListener('click', (event) => {
         });
         window.location.replace("index.html");
     } else {
-        alert("Nieste prihlásený")
+        alert("Nie ste prihlásený!")
         window.location.replace("prihlasenie.html");
     }
 });
