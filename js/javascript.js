@@ -10,10 +10,11 @@ fetch('../json/posts.json')
         //console.log(loggedInUser);
         //console.log(posts);
         let userPosts = document.querySelector('#poziadavky');
-        posts.forEach((text) => {
+        posts.forEach((post) => {
             //console.log(text);
             let liE = document.createElement('li'); //LiElement
-            liE.innerHTML = text
+            liE.id = post.id;
+            liE.innerHTML = `<h3>${post.title}</h3><p>${post.description}</p>`
             //console.log(liE);
             userPosts.append(liE)
         });

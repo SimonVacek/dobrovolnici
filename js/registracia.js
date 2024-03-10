@@ -1,5 +1,5 @@
 let usersList = [{"userName": "JankoHrasko", "mail": "janko.hrasko@gmail.com", "password": "a"},{"userName": "JozkoMrkvicka", "mail": "jožko.mrkvička@gmail.com", "password": "a"}];
-
+let foundUser = false; 
 let registerButton = document.querySelector('#RegisterButton');
 registerButton.addEventListener('click',(event)=>{
     event.preventDefault(); // aby sa neresetovala stranka na submnit
@@ -15,18 +15,30 @@ registerButton.addEventListener('click',(event)=>{
         usersList.push(user);
 
         let json = JSON.stringify(user);
-        console.log(json);
-            fetch("", { //dočasne takto
+        console.log(json, foundUser);
+        fetch("", { //dočasne takto
             method: "POST",
             body: json,
             headers: {
-                "Content-type": "UserSignUp",
+                "Content-type": "application/json; charset=utf-8",
             }
+        }) .then(()=>{
+            foundUser = true;
+            console.log(foundUser)
+            if(foundUser) {
+                window.location.replace("profil.html");
+            } else {
+                alert("Something is not valid");
+            }
+            foundUser = false
         });
-
-    } else {
-        alert("Chyba pri zadávaní údajov!");
+    } 
+    else {
+        alert("Something is not valid");
+        registerPassword = "";
+        registerPasswordRepeat = ""; 
     }
+    
 });
 
 document.querySelector('#registerShow').addEventListener('click', (event) => {

@@ -6,31 +6,28 @@ let loggedInUser = "";
 let signInButton = document.querySelector('#SignInButton');
 signInButton.addEventListener('click', (event) => {
     event.preventDefault();
-    let logInName = document.querySelector('#LogInName').value;
-    let logInPassword = document.querySelector('#LogInPassword').value;
+    let signInName = document.querySelector('#LogInName').value;
+    let signInPassword = document.querySelector('#LogInPassword').value;
     //console.log(logInName,logInPassword)
-    if(logInName != "" && logInPassword  != ""){
-
-        let json = JSON.stringify({'signInName': logInName, 'signInPassword': logInPassword});
+    if(signInName != "" && signInPassword  != ""){
+        let json = JSON.stringify({'signInName': signInName, 'signInPassword': signInPassword});
         console.log(json);
         fetch("", { //dočasne takto
             method: "POST",
             body: json,
             headers: {
-                "Content-type": "UserSignIn",
+                "Content-type": "application/json; charset=utf-8",
             }
+        }) .then(() => {
+            foundUser = true;
+            if(foundUser) {
+                window.location.replace("profil.html");
+            } else {
+                alert("Something is not valid");
+            }
+            
         });
-
-        usersList.forEach(user => {
-            //console.log(user);
-            if(user.userName == logInName && user.password == logInPassword){
-                loggedInUser = user;
-                foundUser = true;
-                console.log(loggedInUser);
-            }
-      });
     }
-    if (!foundUser) alert("Používateľ neexistuje!");
 });
 
 document.querySelector('#logInShow').addEventListener('click', (event) => {
