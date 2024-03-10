@@ -10,8 +10,8 @@ fetch('../json/profil.json')
     })
     .then(data => {
         loggedInUser = data.user
-        document.querySelector('#customizeName').placeholder = loggedInUser.name;
-        document.querySelector('#customizeMail').placeholder = loggedInUser.mail;
+        //document.querySelector('#customizeName').placeholder = loggedInUser.name; //neviem ci to mam nehat, 
+        //document.querySelector('#customizeMail').placeholder = loggedInUser.mail;
         console.log(data.user);
         console.log(loggedInUser);
         console.log("Succesfully logged in")
@@ -46,6 +46,17 @@ confirmButton.addEventListener('click',(event)=>{
         loggedInUser.password = newPassword;
         alert("Úspešne zmenené heslo!");
     }
+
+    let json = JSON.stringify(loggedInUser);
+    console.log(json);
+    fetch("", { //dočasne takto
+        method: "PUT",
+        body: json,
+        headers: {
+            "Content-type": "application/json; charset=utf-8",
+        }
+    });
+    
     document.querySelector('#customizeName').placeholder = loggedInUser.name;
     document.querySelector('#customizeMail').placeholder = loggedInUser.mail;
 

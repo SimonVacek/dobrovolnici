@@ -6,13 +6,12 @@ document.addEventListener("DOMContentLoaded",(event) => {
             return response.json();
         })
         .then(data => {
-            let loggedInUser = data.user
+            let loggedInUser = data.user;
             //console.log(data.user);
             //console.log(loggedInUser);
             let userInfo = document.getElementById('text');
-            userInfo.innerHTML = `<ul><li>${loggedInUser.name}</li><li>${loggedInUser.description}</li></ul>`
-
-            console.log()
+            userInfo.innerHTML = `<ul><li>${loggedInUser.name}</li><li>${loggedInUser.description}</li></ul>`;
+            console.log();
         })
         .catch(errorData => {
             // iba ak je nemožné spraviť request - DNS, network, ...
@@ -35,6 +34,7 @@ document.addEventListener("DOMContentLoaded",(event) => {
                 //console.log(text);
                 let liE = document.createElement('li');
                 liE.innerHTML = `<h3>${post.title}</h3><p>${post.description}</p>`
+                liE.id = post.id;
                 //console.log(liE);
                 userPosts.append(liE)
             });
@@ -45,3 +45,4 @@ document.addEventListener("DOMContentLoaded",(event) => {
             console.error('Rejected: ', errorData);
         })
 });
+
