@@ -155,6 +155,8 @@ a {
     position: relative; 
     border: 1px solid #ccc;
     padding: 20px;
+    width: 700px;
+    margin: auto;
     text-align: center;
     /*left: 50%;*/
 }
