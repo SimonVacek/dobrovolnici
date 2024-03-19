@@ -42,7 +42,7 @@ fetch('../json/profil.json')
     .then(users => {
         let userNotLoggedIn = document.querySelector('#notLoggedIn');
         let userLoggedIn = document.getElementById('loggedIn');
-        let loggedIn = false;
+        let loggedIn = true;
 
         if (!loggedIn) {
             userLoggedIn.style.visibility = "hidden";
@@ -57,10 +57,3 @@ fetch('../json/profil.json')
     .catch(errorData => {
         console.error('Rejected: ', errorData);
     })
-
-document.querySelector('#ziadostiOPomocID').onclick = function () {
-    location.href = "ziadostiOPomoc.html"
-};
-document.querySelector('#ponukaDobrovolnikovID').onclick = function () {
-    location.href = "ponukaDobrovolnikov.html"
-};

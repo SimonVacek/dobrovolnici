@@ -58,7 +58,9 @@ a {
     display: flex;
     justify-content:center;
 }
-#ponuka button {
+
+#ponuka a {
+    all: revert;
     background-color: #F2421B;
     margin-left: 1%;
     margin-right: 1%;
@@ -70,6 +72,32 @@ a {
     margin-bottom: 10px;
     width:5cm;
 }
+
+#ponuka button {
+    background-color: #F2421B;
+    border: none;
+    color: white;
+    /*margin-left: 1%;
+    margin-right: 1%;
+    color: white;
+    padding: 20px 40px;
+    font-size: 16px;
+    
+    cursor: pointer;
+    margin-bottom: 10px;
+    width:5cm;*/
+}
+/*#ponuka button:hover {
+    background-color: #ad2f13;
+}*/
+
+#ponuka a:hover {
+    background-color: #ad2f13;
+}
+#ponuka a:hover button {
+    background-color: #ad2f13;
+}
+
 
 #poziadavky, #dobrovolnici {
     display: flex;
@@ -103,6 +131,10 @@ a {
     margin-bottom: 10px;
 }
 
+#poziadavky button:hover {
+    background-color: #ad2f13;
+}
+
 #poziadavky button a{
     background-color: #F2421B;
 }
@@ -128,6 +160,9 @@ a {
     cursor: pointer;
     margin-bottom: 10px;
 }
+#dobrovolnici button:hover{
+    background-color: #ad2f13;
+}
 
 #returnFromDobList {
     display: flex;
@@ -149,6 +184,9 @@ a {
     border: none;
     cursor: pointer;
     margin-bottom: 10px;
+}
+.category-button:hover {
+    background-color: #076b4f;
 }
 
 .specific-div {
@@ -179,6 +217,13 @@ a {
 .creation a {
     background-color: #F2421B;
 }
+.creation:hover {
+    background-color: #ad2f13;
+}
+.creation:hover a {
+    background-color: #ad2f13;
+}
+
 
 #customize-account img {
     background-color:#03A678;
@@ -190,3 +235,43 @@ a {
     font-weight: bold;
 }
 
+#box li button {
+    background-color: #F2421B;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#box li button:hover {
+    background-color: #ad2f13;
+}
+
+#ulId button {
+    background-color: #F2421B;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#ulId button:hover {
+    background-color: #ad2f13;
+}
+
+#returnFromDobList a:hover {
+    background-color: #ad2f13;
+}
+
+#costumize-account a {
+    text-decoration: none;
+}
+#costumize-account a:hover {
+    text-decoration: underline;
+    background-color: rgb(122, 122, 122);
+    color:white
+}
