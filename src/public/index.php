@@ -1,17 +1,25 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>PHP</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-<h1>PHP</h1>
-<h2><?php echo 'Hello world!' ?></h2>
-<p>PHP is a popular general-purpose scripting language that is especially suited to web development.</p>
-<p>Fast, flexible and pragmatic, PHP powers everything from your blog to the most popular websites in the world.</p>
-<p>And, of course, PHP is open source.</p>
-<p>For more information and documentation, visit the <a href="https://www.php.net">PHP website</a>.</p>
-</body>
-</html>
+<?php
 
+use dobrovolnici\Entity\User;
+use dobrovolnici\Hydrator\UserHydrator;
+use dobrovolnici\Service\DbService;
+use dobrovolnici\Service\UserModel;
+
+include_once '../vendor/autoload.php';
+
+// Parametre pripojenia k DB
+$host = $_ENV['POSTGRES_HOST'];
+$port = '5432';
+$dbname = $_ENV['APP_DB_NAME'];
+$user = $_ENV['POSTGRES_USER'];
+$password = $_ENV['POSTGRES_PASSWORD'];
+
+// vytvorenie instancie triedy UserService
+$userModel = new UserModel(
+    new DbService($host, $port, $dbname, $user, $password)
+);
+
+$users = $userModel->getAll();
+
+// vypis vysledkov
+include 'template.php';

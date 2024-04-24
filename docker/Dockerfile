@@ -31,7 +31,7 @@ RUN docker-php-ext-install zip mysqli fileinfo mbstring curl exif xml filter
 RUN docker-php-ext-configure intl \
     && docker-php-ext-install intl
 ## PostgreSQL PDO support
-RUN docker-php-ext-install pdo
+RUN docker-php-ext-install pdo pdo_pgsql pgsql
 
 #install iamgick
 #RUN pecl install imagick \
