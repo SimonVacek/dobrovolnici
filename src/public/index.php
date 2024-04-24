@@ -1,8 +1,12 @@
 <?php
 
-use dobrovolnici\Entity\User;
+use dobrovolnici\Controller\UserController;
+use dobrovolnici\Enum\Email;
+use dobrovolnici\Exceptions\RouteNotFoundException;
 use dobrovolnici\Hydrator\UserHydrator;
+use dobrovolnici\Router\Router;
 use dobrovolnici\Service\DbService;
+use dobrovolnici\Entity\User;
 use dobrovolnici\Service\UserModel;
 
 include_once '../vendor/autoload.php';
@@ -14,12 +18,17 @@ $dbname = $_ENV['APP_DB_NAME'];
 $user = $_ENV['POSTGRES_USER'];
 $password = $_ENV['POSTGRES_PASSWORD'];
 
-// vytvorenie instancie triedy UserService
-$userModel = new UserModel(
-    new DbService($host, $port, $dbname, $user, $password)
-);
+// Vytvoríme si router
 
-$users = $userModel->getAll();
+$router = new Router();
 
-// vypis vysledkov
-include 'template.php';
+// Nakonfigurjeme router
+$router->get('/users', [UserController::class,'showUsers']);
+
+// volanie routeru
+try {
+    echo $router->resolve($_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI']);
+} catch (RouteNotFoundException $e) {
+    http_response_code(404);
+    include_once '404.php';
+}
