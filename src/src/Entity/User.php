@@ -4,6 +4,9 @@ namespace dobrovolnici\Entity;
 
 use dobrovolnici\Enum\Email;
 
+/**
+ *
+ */
 class User
 {
     /**

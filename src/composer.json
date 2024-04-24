@@ -1,41 +1,32 @@
 {
-    "name": "bobajt/dobrovolnici",
-    "description": "traja mušketieri",
-    "type": "project",
-    "version": "1.0.0",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Šimon Vacek",
-            "email": "Author@ssnd.sk"
-        },
-        
-        {
-            "name": "Boris Bobáčik",    
-            "email": "Author@ssnd.sk"            
-        },
-        {
-            "name": "Samuel Švančarek", 
-            "email": "Author@ssnd.sk"
-        }
-    ],
-    "support": {
-        "email": "dobrovolnici@gmail.com"
+  "name": "bobajt/dobrovolnici",
+  "description": "Traja Mušketieri",
+  "type": "project",
+  "version": "1.0.0",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "₁Šimon Vacek",
+      "email": "vacecina@gmail.com"
     },
-    "require": {
-        "php": ">=8.2"
+    {
+      "name": "₂Boris Bobáčik",
+      "email": "boris.bobacik@gmail.com"
     },
-    "autoload": {
-        "psr-4": {
-            "dobrovolnici\\": "src/"
-        }
+    {
+      "name": "₃Samuel Švančarek",
+      "email": "samuelsvancarek4@gmail.com"
     }
+  ],
+  "support": {
+    "email": "vacecina@gmail.com"
+  },
+  "require": {
+    "php": ">=8.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "dobrovolnici\\": "src/"
+    }
+  }
 }
-
-
-
-
-
-
-
-
