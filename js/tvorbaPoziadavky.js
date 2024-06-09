@@ -13,19 +13,20 @@ createButton.addEventListener('click', (event) => {
     let json = JSON.stringify({'post': template});
     console.log(json);
 
-    let userLoggedIn = false;
+    let userLoggedIn = true;
 
     if(userLoggedIn) {
-        fetch("", { //dočasne takto
+        fetch("http://127.0.0.1:8020/postPosts.php", { //dočasne takto
             method: "POST",
             body: json,
             headers: {
                 "Content-type": "application/json; charset=utf-8",
-            }
+            },
+            mode: 'no-cors'
         }) .then(response => {
             console.log(response);
         });
-        window.location.replace("index.html");
+        //window.location.replace("index.html");
     } else {
         alert("Nie ste prihlásený!")
         window.location.replace("prihlasenie.html");

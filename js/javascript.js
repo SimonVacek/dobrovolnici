@@ -1,6 +1,6 @@
-fetch('../json/posts.json')
+fetch('http://127.0.0.1:8020/getPosts.php', { method: 'GET', mode: 'no-cors'})
     .then(response => {
-        console.log("fetch start");
+        console.log("fetch start posts");
         console.log('Resolved: ', response);
         return response.json();
     })
@@ -31,11 +31,11 @@ fetch('../json/posts.json')
     .catch(errorData => {
         // iba ak je nemožné spraviť request - DNS, network, ...
         console.error('Rejected: ', errorData);
-    }) 
+    })
 
-fetch('../json/profil.json')
+fetch('../JSON/profil.json')
     .then(response => {
-        console.log("fetch start");
+        console.log("fetch start profil");
         console.log('Resolved: ', response);
         return response.json();
     })

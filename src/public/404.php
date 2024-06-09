@@ -5,7 +5,7 @@
     <title>Title</title>
 </head>
 <body>
-<h1>What the Hell!!!</h1>
-<p>404 - Page not Found</p>
+<h1>404 - Page not Found</h1>
+<p>It's yo fault dawg</p>
 </body>
 </html>
