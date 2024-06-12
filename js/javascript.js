@@ -1,4 +1,4 @@
-fetch('http://127.0.0.1:8020/getPosts.php', { method: 'GET', mode: 'no-cors'})
+fetch('http://127.0.0.1:8020/getPosts.php', { method: 'GET'})
     .then(response => {
         console.log("fetch start posts");
         console.log('Resolved: ', response);

@@ -12,8 +12,8 @@ use dobrovolnici\Service\UserModel;
 include_once '../vendor/autoload.php';
 
 // Parametre pripojenia k DB
-$host = $_ENV['POSTGRES_HOST'];
-$port = '5432';
+$host = 'localhost';
+$port = '5432'; 
 $dbname = $_ENV['APP_DB_NAME'];
 $user = $_ENV['POSTGRES_USER'];
 $password = $_ENV['POSTGRES_PASSWORD'];

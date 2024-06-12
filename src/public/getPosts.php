@@ -11,9 +11,9 @@ use dobrovolnici\Service\UserModel;
 
 include_once '../vendor/autoload.php';
 
-$host = $_ENV['POSTGRES_HOST'];
+$host = '172.26.0.2';
 $port = '5432';
-$dbname = "ssnd_user";
+$dbname = "ssnd";
 $user = $_ENV['POSTGRES_USER'];
 $password = $_ENV['POSTGRES_PASSWORD'];
 
@@ -31,6 +31,7 @@ foreach($queryData as $instance){
 }
 
 header('Content-Type: application/json');
-
-echo json_encode($data);
+header("Access-Control-Allow-Origin: *");
+//echo json_encode($data);
+echo json_encode($_REQUEST);
 ?>

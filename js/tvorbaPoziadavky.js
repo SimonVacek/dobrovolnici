@@ -11,21 +11,18 @@ createButton.addEventListener('click', (event) => {
     //console.log({'post': template});
     
     let json = JSON.stringify({'post': template});
-    console.log(json);
-
     let userLoggedIn = true;
-
+    
     if(userLoggedIn) {
         fetch("http://127.0.0.1:8020/postPosts.php", { //dočasne takto
             method: "POST",
             body: json,
-            headers: {
-                "Content-type": "application/json; charset=utf-8",
-            },
             mode: 'no-cors'
-        }) .then(response => {
-            console.log(response);
-        });
+        }) .then(function(response){
+            return response.text();
+        }) .then(function(data){
+            console.log(data);
+        })
         //window.location.replace("index.html");
     } else {
         alert("Nie ste prihlásený!")
