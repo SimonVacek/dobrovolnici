@@ -1,9 +1,9 @@
 <?php
-
-/*
-use dobrovolnici\Service\DbService;
 header("Access-Control-Allow-Origin: *");
 header('Content-Type: application/json');
+/*
+use dobrovolnici\Service\DbService;
+
 include_once '../vendor/autoload.php';
 
 $host = '172.26.0.2';
@@ -37,4 +37,4 @@ if (!empty($posty)){
 
 */
 
-echo json_encode($_REQUEST);
+echo json_encode($_POST);

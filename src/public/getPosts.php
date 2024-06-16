@@ -1,22 +1,21 @@
 <?php
 
-use dobrovolnici\Controller\UserController;
-use dobrovolnici\Enum\Email;
-use dobrovolnici\Exceptions\RouteNotFoundException;
-use dobrovolnici\Hydrator\UserHydrator;
-use dobrovolnici\Router\Router;
 use dobrovolnici\Service\DbService;
-use dobrovolnici\Entity\User;
-use dobrovolnici\Service\UserModel;
+
 
 include_once '../vendor/autoload.php';
-
-$host = '172.26.0.2';
+/*
+$host = $_ENV['POSTGRES_HOST'];
 $port = '5432';
-$dbname = "ssnd";
+$dbname = "ssnd-db";
 $user = $_ENV['POSTGRES_USER'];
 $password = $_ENV['POSTGRES_PASSWORD'];
-
+*/
+$host = '172.26.0.2';
+$port = '5432';
+$dbname = 'ssnd-db';
+$user = $_ENV['POSTGRES_USER'];
+$password = $_ENV['POSTGRES_PASSWORD'];
 $db = new DbService($host, $port, $dbname, $user, $password);
 
 $data = [
@@ -32,6 +31,6 @@ foreach($queryData as $instance){
 
 header('Content-Type: application/json');
 header("Access-Control-Allow-Origin: *");
-//echo json_encode($data);
-echo json_encode($_REQUEST);
+echo json_encode($data);
+//echo json_encode($_REQUEST);
 ?>

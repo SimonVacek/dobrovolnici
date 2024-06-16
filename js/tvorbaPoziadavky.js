@@ -16,8 +16,7 @@ createButton.addEventListener('click', (event) => {
     if(userLoggedIn) {
         fetch("http://127.0.0.1:8020/postPosts.php", { //dočasne takto
             method: "POST",
-            body: json,
-            mode: 'no-cors'
+            body: json
         }) .then(function(response){
             return response.text();
         }) .then(function(data){

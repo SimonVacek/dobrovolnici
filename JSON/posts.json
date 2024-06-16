@@ -3,12 +3,14 @@
         {
             "title": "Pomoc s nákupom",
             "description": "Donec ac cursus sapien. Fusce massa sem, bibendum eu erat at, tristique imperdiet sem. Donec ornare ac est eu interdum. Curabitur efficitur elementum nulla in tincidunt. Maecenas neque sapien, vulputate eget dolor eget, aliquam condimentum turpis. Maecenas auctor mauris quis libero elementum tincidunt.",
-            "id" : 1
+            "id" : 1,
+            "uuid": "019021a1-24dd-7cd4-bce2-0a5e0c6bf6f0"
         },
         {
             "title": "Ulohy pls",
             "description":"Donec ac cursus sapien. Fusce massa sem, bibendum eu erat at, tristique imperdiet sem. Donec ornare ac est eu interdum. Curabitur efficitur elementum nulla in tincidunt. Maecenas neque sapien, vulputate eget dolor eget, aliquam condimentum turpis. Maecenas auctor mauris quis libero elementum tincidunt.",
-            "id" : 2
+            "id" : 2,
+            "uuid": "019021a1-24dd-7cd4-bce2-0a5e0c6bf6f0"
         }
     ]
 }

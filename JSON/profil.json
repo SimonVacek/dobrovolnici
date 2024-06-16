@@ -1,6 +1,6 @@
 {
     "user": {
-        "id": 10,
+        "uuid": 10,
         "name": "Jožko Mrkvička",
         "mail": "jožko.mrkvička@gmail.com",
         "password": "a",
